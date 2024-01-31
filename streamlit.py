@@ -25,14 +25,14 @@ if st.button('Start analysis'):
 
             json_data = json.dumps({"file_name" : uploaded_file.name})
             files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
-            response = requests.post("http://127.0.0.1:5001/upload", files=files)
-            response2 = requests.post("http://127.0.0.1:5001/run", data=json_data, headers={'Content-Type': 'application/json'})
+            response = requests.post("http://10.0.2.4:5000/upload", files=files)
+            response2 = requests.post("http://10.0.2.4:5000/run", data=json_data, headers={'Content-Type': 'application/json'})
 
             file_name_without_extension = os.path.splitext(uploaded_file.name)[0]
             request_file_name = f'{file_name_without_extension}_resultImage.jpg'
 
             # Flask 서버로 임시 URL 생성 요청 보내기
-            response = requests.get(f"http://127.0.0.1:5001/generate_url/{request_file_name}")
+            response = requests.get(f"http://10.0.2.4:5000/generate_url/{request_file_name}")
 
         if response.ok:
             # 임시 URL 받기
@@ -45,7 +45,7 @@ if st.button('Start analysis'):
 
         if response.ok:
             st.success("Tracking Success")
-            
+
         else:
             st.error("업로드 실패")
 
