@@ -7,7 +7,7 @@ import os
 st.set_page_config(
     page_icon="images/GOQBA_logo.png",
     page_title="ASMIT TEST WEB",
-    layout="wide",
+    layout="centered",
 )
 
 add_logo()
