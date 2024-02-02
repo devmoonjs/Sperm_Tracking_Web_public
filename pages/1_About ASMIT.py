@@ -12,7 +12,7 @@ img2 = "images/ExampleTracking.png"
 st.set_page_config(
     page_icon="🎧",
     page_title="ASMIT TEST WEB",
-    layout="wide",
+    layout="centered",
 )
 
 add_logo()
