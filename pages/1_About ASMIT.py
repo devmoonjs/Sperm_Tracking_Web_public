@@ -11,7 +11,7 @@ img2 = "images/ExampleTracking.png"
 
 st.set_page_config(
     page_icon="images/Logo.png",
-    page_title="ASMIT TEST WEB",
+    page_title="Sperm Trackin AI",
     layout="centered",
 )
 
