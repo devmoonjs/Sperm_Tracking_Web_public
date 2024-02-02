@@ -5,7 +5,7 @@ import json
 import os
 
 st.set_page_config(
-    page_icon="images/Goqba_Logo.png",
+    page_icon="images/Logo.png",
     page_title="ASMIT TEST WEB",
     layout="centered",
 )
